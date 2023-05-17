@@ -1,27 +1,281 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,ol, li{
+  list-style: none;
+}
+
+/* Navbar  */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 45px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.teslaLogo{
+  width: 130px;
+  margin-right: 35px;
+}
+.navbarnav-menu,
+.navbarnav{
+display: flex;
+gap: 5px;
+}
+.navbarnav-items{
+  font-family: 'poppins', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+.navbarnav-items:hover{
+  background: #b3b7bd48;
+
+}
+.itemsLink{
+  color: #171a30;
+
+}
+
+/* Hero */
+
+.hero{
+  background: url('../../public//images//model-3.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: grid;
+  place-items:center;
+  /* background-attachment: fixed; */
+}
+.accesor,
+.modelY,
+.modelS,
+.modelX,
+.solar1,
+.solar2{
+  height: 100vh;
+  display: grid;
+  place-items:center;
+  /* background-attachment: fixed !important; */
+}
+.modelY{
+  background: url('../../public/images/model-y.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: right;
+}
+.modelS{
+  background: url('../../public//images//model-s.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.modelX{
+  background-image: url('../../public/images/model-x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:right;
+}
+.solar1{
+  background: url('../../public/images/solar-roof.jpg');
+  background-position:right;
+  background-size: cover;
+}
+.solar2{
+  background: url('../../public/images/solar-panel.jpg');
+  background-position:center;
+  background-size: cover;
+}
+
+.accesor{
+  background: url('../../public/images/accessories.jpg');
+  background-size: cover;
+  background-position:right;
+}
+.hero-textArea{
+  text-align: center;
+  margin-top: 70px;
+}
+.hero-textArea h3{
+  font-size: 2.5rem;
+  margin: 0px 0px 30px 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+
+}
+.hero-textArea p{
+  font-weight: 500;
+}
+
+.touchless{
+  border-bottom: 1px solid #313131;
+  padding: 3px;
+  cursor: pointer;
+  transition:all 0.4s linear;
+  font-weight: 400 !important;
+
+}
+.touchless:hover{
+  border-bottom-width: 2px ;
+}
+
+.hero-buttons{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.btnMain{
+  display: flex;
+  padding: 240px 0 20px;
+}
+
+.hero-btn{
+  background-color: rgba(23, 26, 32, 0.8);
+  color: #fff;
+  width: 256px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 20px;
+  opacity: 0.9;  
+}
+.hero-btn:nth-child(2){
+  background-color: #fff;
+  color: #171A20CC;
+  margin-left: 20px;
+
+}
+
+.down-icon{
+  height: 50px;
+  margin-top: 30px;
+  animation: downIconAnim 1.5s ease 0s infinite normal none running ;
+}
+
+@keyframes downIconAnim{
+  0%,
+  20%,
+  50%,
+  80%,
+  100%{
+    transform: translateY(0);
+  }
+  40%{
+    transform: translateY(5px); 
+  }
+  60%{
+    transform: translateY(3px);
+  }
+
+
+}
+
+.fadeInUp{
+  animation: fadeinup 1s ease;
+}
+
+.fadeInUp2{
+  animation: fadeinup2 1s ease;
+}
+
+@keyframes fadeinup {
+  from{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes fadeinup2 {
+  from{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+
+/* sideMenu  */
+
+
+.side-menu {
+background: #fff;
+width: 300px;
+height: 100vh;
+display: flex;
+flex-direction: column;
+padding: 20px;
+position: fixed;
+top: 0;
+right: -100%;
+transition: 900ms ;
+}
+.side-menu.active{
+  right: 0;
+  transition: 950ms ;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.sideBarNAv{
+padding: 0;
+}
+.close-icon{
+  color: #171A20;
+  align-self: end;
+  transition: 0.5s ease;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.close-icon:hover{
+  transform: rotate(180deg);
+}
+
+.hamburgerLinks{
+  cursor: pointer;
+  font-family: 'poppins', sans-serif;
+  font-size: 15px;
+  padding: 15px;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+.hamburgerLinks:hover{
+  background: #b3b7bd48;
+
 }
